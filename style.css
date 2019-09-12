@@ -13,7 +13,7 @@ body{
 
 }
 #block{
-    height: 150px;
+    height: 200px;
     width:100%;
     top: 0;
     bottom: 0;
@@ -104,6 +104,9 @@ a.href{
 }
 #share_vk, #share_tg{
 }
+h1.quest-title1{
+    position: relative
+}
 h1.quest-title1,h1.quest-title2{
 	font-family:UGCY;
     font-size:40px;
@@ -112,7 +115,7 @@ h1.quest-title1,h1.quest-title2{
     white-space: nowrap;
     padding:12px 20px 10px 20px;
     display:inline;
-    z-index:10;
+    z-index: 15;
 }
 .text-overlay{
     position:relative;
@@ -127,7 +130,7 @@ h3.quest-title{
     margin-top:-100px;
 }
 .text-center{
-    display:inlblock;
+    z-index: 20;
     margin:0 auto;
 }
 #start_button{
