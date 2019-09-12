@@ -1,6 +1,6 @@
 html, body {
     width: 100%; height: 100%; margin: 0; min-width:360px;
-	overflow:hidden;   
+	overflow:hidden;
 }
 body{
 }
@@ -8,19 +8,20 @@ body{
 	font-family: 'UGCY';
 	font-style: normal;
 	font-weight: 400;
-	src: url(UGCY.woff2) format("woff2"), 
+	src: url(UGCY.woff2) format("woff2"),
 	url(UGCY.woff) format("woff");
-	
+
 }
 #block{
     height: 150px;
+    width:100%;
     top: 0;
     bottom: 0;
-	margin: auto;
-	position:absolute;
+	  margin: auto;
+	  position:absolute;
 	/*box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	background-color: rgba(255,255,255,0.95);*/
-    
+
 	padding: 50px 50px 50px 50px;
 	transition-property: top,width,height;
 	transition-duration: .5s;
@@ -33,7 +34,7 @@ body{
 	z-index: -99999;
 	top:0px;
 	display: block;
-	
+
 	width: 100%;
 	height: 100%;
 	-webkit-filter: blur(5px);
@@ -43,7 +44,7 @@ body{
 	filter: blur(15px);
 	transition-property: filter, -ms-filter, -o-filter,-moz-filter,-webkit-filter;
 	transition-duration: .25s;
-	
+
 }
 
 #grad{
@@ -96,7 +97,7 @@ a.href{
 	color:#000!important;
 }
 #next_button{
-	
+
 }
 #share_pic{
     margin:0 auto;
@@ -130,8 +131,8 @@ h3.quest-title{
     margin:0 auto;
 }
 #start_button{
-	display:flex; 
-	margin: 0 auto; 
+	display:flex;
+	margin: 0 auto;
 	margin-top:40px;
 	cursor:pointer;
 }
@@ -139,7 +140,7 @@ h3.quest-title{
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
   }
-  
+
   20%, 80% {
     transform: translate3d(2px, 0, 0);
   }
@@ -186,7 +187,7 @@ h3.quest-title{
     #text-shadow{
         margin-top:-50px;
     }
-	
+
 }
 @media screen and (min-width: 480px) and (max-width: 800px){
 	#block{
@@ -209,7 +210,7 @@ h3.quest-title{
     #text-shadow{
         margin-top:-50px;
     }
-	
+
 }
 @media screen and (min-width: 800px) and (max-width: 1100px){
     h1.quest-title2,h1.quest-title1{
@@ -221,9 +222,5 @@ h3.quest-title{
     #text-shadow{
         margin-top:-55px;
     }
-	
+
 }
-
-
-
-
