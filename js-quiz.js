@@ -3,7 +3,7 @@ $(document).ready(function() {
     if (cookie != "true") {
         window.location.href="/";
     }
-    var body = $('html')
+    var body = $('html');
     setTimeout(function() {body.css({'display':'unset','animation':'fadeInDown 0.5s cubic-bezier(.36,.07,.19,.97) both'});}, 500);
 });
 function getCookie(name) {
