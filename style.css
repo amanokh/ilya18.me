@@ -2,7 +2,8 @@ html, body {
     width: 100%; height: 100%; margin: 0; min-width:360px;
     overflow: hidden;
 }
-body{
+html{
+    display: none;
 }
 .body-blue {
     background: linear-gradient(45deg, rgba(143, 219, 236, 0.76), rgba(238, 255, 99, 0.5));
@@ -34,6 +35,15 @@ body{
     max-width: 700px;
     position: relative;
 }
+.block-wide{
+    max-width: 900px !important;
+    top:0 !important;
+}
+#answer-list{
+    display: none;
+    margin-bottom: 20px !important;
+}
+
 
 #grad{
 	background: linear-gradient(45deg, rgba(143, 219, 236, 0.76), rgba(238, 255, 99, 0.5));
@@ -63,6 +73,20 @@ p.title-desc{
 a.build-date{
     position: absolute;
     bottom: 0;
+}
+.btn{
+    cursor: pointer;
+}
+#quiz-alert{
+    display: none;
+}
+.alert-success{
+    display: block !important;
+    animation: fadeInDown 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+.alert-warning{
+    display: block !important;
+    animation: fadeInDown 0.4s cubic-bezier(.36,.07,.19,.97) both;
 }
 @keyframes fadeInDown {
   from {
