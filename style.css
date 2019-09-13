@@ -20,8 +20,9 @@ body{
     border-radius: 20px;
     padding:20px;
     z-index: 20;
-    margin:25px;
-    top:200px;
+    margin:0 auto;
+    top:25vh;
+    max-width: 700px;
     position: relative;
 }
 
@@ -60,4 +61,16 @@ p.title-desc{
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+}
+@media screen and (max-width: 480px){
+.block{
+    background: #FFF;
+    border-radius: 20px;
+    padding:20px;
+    z-index: 20;
+    margin:25px;
+    top:25vh;
+    max-width: 700px;
+    position: relative;
+}
 }
