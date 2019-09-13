@@ -18,7 +18,7 @@ body{
 .block{
     background: #FFF;
     border-radius: 20px;
-    padding:15px;
+    padding:20px;
     z-index: 20;
     margin:25px;
     top:200px;
@@ -27,6 +27,13 @@ body{
 
 #grad{
 	background: linear-gradient(45deg, rgba(143, 219, 236, 0.76), rgba(238, 255, 99, 0.5));
+	width: 100%;
+	height: 100%;
+	position: fixed;
+    z-index: 1;
+}
+#grad-pink{
+	background: linear-gradient(45deg, pink, rgba(201, 226, 0, 0.5));
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -41,4 +48,16 @@ h1.quest-title{
 p.title-desc{
     margin-top:-10px;
 }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
 
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
