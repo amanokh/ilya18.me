@@ -1,10 +1,18 @@
 html, body {
     width: 100%; height: 100%; margin: 0; min-width:360px;
-	overflow:hidden;
 }
 body{
 }
+.body-blue {
+    background: linear-gradient(45deg, rgba(143, 219, 236, 0.76), rgba(238, 255, 99, 0.5));
+    background-attachment:fixed;
 
+}
+.body-pink {
+    background: linear-gradient(45deg, pink, rgba(201, 226, 0, 0.5));
+    background-attachment:fixed;
+
+}
 @font-face{
 	font-family: 'UGCY';
 	font-style: normal;
@@ -28,8 +36,9 @@ body{
 
 #grad{
 	background: linear-gradient(45deg, rgba(143, 219, 236, 0.76), rgba(238, 255, 99, 0.5));
-	width: 100%;
-	height: 100%;
+    background-attachment:fixed;
+	width: inherit;
+	height: inherit;
 	position: fixed;
     z-index: 1;
 }
@@ -69,7 +78,7 @@ p.title-desc{
     padding:20px;
     z-index: 20;
     margin:25px;
-    top:25vh;
+    top:15vh;
     max-width: 700px;
     position: relative;
 }
