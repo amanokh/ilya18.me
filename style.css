@@ -62,7 +62,7 @@ p.title-desc{
 }
 a.build-date{
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
 }
 @keyframes fadeInDown {
   from {
@@ -84,8 +84,13 @@ a.build-date{
     padding:20px;
     z-index: 20;
     margin:25px;
-    top:15vh;
+    top:20vh;
     max-width: 700px;
     position: relative;
+}
+}
+@media screen and (max-height: 480px){
+.block{
+    top:5vh;
 }
 }
