@@ -60,6 +60,10 @@ h1.quest-title{
 p.title-desc{
     margin-top:-10px;
 }
+a.build-date{
+    position: absolute;
+    bottom: 0px;
+}
 @keyframes fadeInDown {
   from {
     opacity: 0;
