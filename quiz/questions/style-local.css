@@ -1,0 +1,16 @@
+#quiz-alert{
+    display: none;
+}
+#quiz-button, #end-button{
+    display: none;
+}
+.ans-right{
+    background-color: #aceabb !important;
+}
+.ans-wrong{
+    background-color: #fce08a !important;
+}
+#answer-list{
+    display: none;
+    margin-bottom: 20px !important;
+}

@@ -12,6 +12,7 @@ function getCookie(name) {
   ));
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }
+var isAlertShown = false;
 function onEnterCode(){
     var code = document.forms["enter-check"]["code"].value;
     
@@ -21,6 +22,16 @@ function onEnterCode(){
     }
     else {
         var a=$('#wrong-code');
-        a.css({'display':'inline-block','animation':'fadeInDown 0.25s cubic-bezier(.36,.07,.19,.97) both'});
+        a.css('display', 'inline-block');
+        a.toggleClass('alert-fade', !isAlertShown);
+        setTimeout(function() {
+            a.removeClass('alert-fade');
+        }, 500);
+        a.toggleClass('alert-shake', isAlertShown);
+        isAlertShown = true;
+        setTimeout(function() {
+            a.removeClass('alert-shake');
+        }, 500);
     }
+    
 }

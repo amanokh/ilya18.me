@@ -1,19 +1,28 @@
 var question = -1;
+var curQuestion = 0;
 var ql = [];
+var quizAlert = $("#quiz-alert");
+var quizButton = $("#quiz-button");
 
 function startTest(){
     $(".block").addClass('block-wide');
     $("#answer-list").css("display", "block");
+    $("#start-button").css('display','none');
     nextQuestion();
 }
 
 function nextQuestion(){
     question++;
+    quizButton.css("display", "none");
+    quizAlert.css('display','none');
+    quizAlert.removeClass("alert-success");
+    quizAlert.removeClass("alert-warning");
+    for (var i = 0; i < 4; i++){
+        var ansId = "#ans" + i;
+        $(ansId).removeClass("ans-right");               $(ansId).removeClass("ans-wrong");
+    }
     if (question < questions.length){
         ql = setQuestsList();
-        $("#quiz-alert").removeClass("alert-success");
-        $("#quiz-alert").removeClass("alert-warning");
-
         $("#quiz-title").html(questions[question]["title"]);
         $(".title-desc").css("display", "none");
         for (var i = 0; i < 4; i++){
@@ -28,12 +37,23 @@ function nextQuestion(){
 }
 
 function checkAnswer(i){
-    if (ql[i] == 0){
-        $("#quiz-alert").addClass("alert-success");
-        $("#quiz-alert").html(questions[question]["true_comment"]);
-    } else {
-        $("#quiz-alert").addClass("alert-warning");
-        $("#quiz-alert").html(questions[question]["fake_comments"][ql[i] - 1]);
+    if (question == questions.length - 1) $("#end-button").css('display','block');
+    else quizButton.css('display','block');
+
+    if (curQuestion == question){
+        quizAlert.css('display','inline-block');
+        if (ql[i] == 0){
+            $("#ans" + i).addClass("ans-right");
+            quizAlert.addClass("alert-success");
+            quizAlert.html(questions[question]["true_comment"]);
+        } else {
+            $("#ans" + i).addClass("ans-wrong");
+            $("#ans" + ql.indexOf(0)).addClass("ans-right");
+            quizAlert.addClass("alert-warning");
+            quizAlert.html(questions[question]["fake_comments"][ql[i] - 1]);
+            
+        }
+        curQuestion++;
     }
 }
 function setQuestsList() {

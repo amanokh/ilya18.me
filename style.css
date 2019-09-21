@@ -80,13 +80,17 @@ a.build-date{
 #quiz-alert{
     display: none;
 }
-.alert-success{
-    display: block !important;
-    animation: fadeInDown 0.4s cubic-bezier(.36,.07,.19,.97) both;
+.ans_right{
+    background-color: #aceabb !important;
 }
-.alert-warning{
-    display: block !important;
-    animation: fadeInDown 0.4s cubic-bezier(.36,.07,.19,.97) both;
+.ans-wrong{
+    background-color: #fce08a !important;
+}
+.alert-fade{
+    animation: fadeInDown 0.25s cubic-bezier(.36,.07,.19,.97) both;
+}
+.alert-shake{
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
 }
 @keyframes fadeInDown {
   from {
@@ -98,6 +102,18 @@ a.build-date{
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes shake {
+    20%, 60% {
+    transform: translate3d(-4px, 0, 0);
+  }
+    40%, 80% {
+    transform: translate3d(4px, 0, 0);
+  }
+
+    100% {
     transform: translate3d(0, 0, 0);
   }
 }

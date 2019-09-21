@@ -10,6 +10,7 @@
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 		<link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="style-local.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 		<title>18 мне уже</title>
 	</head>
@@ -21,7 +22,7 @@
                 <h1 id="quiz-title" class="quest-title">
                     1. Квиз с ответами на вопросы</h1>
                 <p class="title-desc">Необходимо будет ответить на несколько вопросов. Если ответил неправильно, оставим возможность выбрать ответ ещё раз.</p>
-                <div id="quiz-alert" class="alert" role="alert">
+                <div id="quiz-alert" class="alert alert-fade" role="alert">
                     A simple primary alert—check it out!
                 </div>
                 <div id="answer-list" class="list-group">
@@ -30,7 +31,9 @@
                     <a href="#" id="ans2" onclick="checkAnswer(2)" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
                     <a href="#" id="ans3" onclick="checkAnswer(3)" class="list-group-item list-group-item-action">Vestibulum at eros</a>
                 </div>
-                <button type="button" class="btn btn-success" onclick="startTest()">Начать квиз</button>
+                <button id="start-button" type="button" class="btn btn-success" onclick="startTest()">Начать квиз</button>
+                <button id="quiz-button" type="button" class="btn btn-success" onclick="nextQuestion()">Следующий вопрос</button>
+                <button id="end-button" type="button" class="btn btn-success" onclick="endTest()">Закончить тест</button>
             </div>
         </div>
             
