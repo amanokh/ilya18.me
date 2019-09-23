@@ -1,3 +1,6 @@
 .game-lives{
     text-align: left;
 }
+.game-row{
+    display: inline-block;
+}

@@ -10,6 +10,16 @@
 .ans-wrong{
     background-color: #fce08a !important;
 }
+.emoji-end{
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+}
+#end-title{
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+}
 #answer-list{
     display: none;
     margin-bottom: 20px !important;

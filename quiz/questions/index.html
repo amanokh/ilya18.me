@@ -17,7 +17,7 @@
 	<body>
         <div id="grad-pink"></div>
         <div class="inner">
-            <div class="block">
+            <div class="block block-quiz">
                 <i class="em em-books"></i>
                 <h1 id="quiz-title" class="quest-title">
                     1. Квиз с ответами на вопросы</h1>
@@ -34,6 +34,11 @@
                 <button id="start-button" type="button" class="btn btn-success" onclick="startTest()">Начать квиз</button>
                 <button id="quiz-button" type="button" class="btn btn-success" onclick="nextQuestion()">Следующий вопрос</button>
                 <button id="end-button" type="button" class="btn btn-success" onclick="endTest()">Закончить тест</button>
+            </div>
+            <div class="block block-end">
+                <h1 id="end-title" class="quest-title">
+                    Поздравляем! Твой результат: </h1>
+                <img class="emoji-end" src="man.png"/>
             </div>
         </div>
             
