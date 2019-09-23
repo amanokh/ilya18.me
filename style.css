@@ -39,12 +39,9 @@ html{
     max-width: 900px !important;
     top:0 !important;
 }
-#answer-list{
+.block-end{
     display: none;
-    margin-bottom: 20px !important;
 }
-
-
 #grad{
 	background: linear-gradient(45deg, rgba(143, 219, 236, 0.76), rgba(238, 255, 99, 0.5));
     background-attachment:fixed;
@@ -76,15 +73,6 @@ a.build-date{
 }
 .btn{
     cursor: pointer;
-}
-#quiz-alert{
-    display: none;
-}
-.ans_right{
-    background-color: #aceabb !important;
-}
-.ans-wrong{
-    background-color: #fce08a !important;
 }
 .alert-fade{
     animation: fadeInDown 0.25s cubic-bezier(.36,.07,.19,.97) both;

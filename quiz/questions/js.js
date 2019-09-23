@@ -1,5 +1,6 @@
 var question = -1;
 var curQuestion = 0;
+var score = 0;
 var ql = [];
 var quizAlert = $("#quiz-alert");
 var quizButton = $("#quiz-button");
@@ -46,6 +47,7 @@ function checkAnswer(i){
             $("#ans" + i).addClass("ans-right");
             quizAlert.addClass("alert-success");
             quizAlert.html(questions[question]["true_comment"]);
+            score++;
         } else {
             $("#ans" + i).addClass("ans-wrong");
             $("#ans" + ql.indexOf(0)).addClass("ans-right");
@@ -55,6 +57,11 @@ function checkAnswer(i){
         }
         curQuestion++;
     }
+}
+function endTest(){
+    $(".block-quiz").css('display','none');
+    $(".block-end").css('display','block');
+    $("#end-title").html("Поздравляем! Твой результат: +" + score * 25 + " баллов!");
 }
 function setQuestsList() {
 	ql = []
