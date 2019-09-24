@@ -62,6 +62,8 @@ function endTest(){
     $(".block-quiz").css('display','none');
     $(".block-end").css('display','block');
     $("#end-title").html("Поздравляем! Твой результат: +" + score * 25 + " баллов!");
+    var currentScore = parseInt(getCookie("score"));
+    document.cookie="score=" + (currentScore + score * 25).toString() + "; max-age=36000; path=/";
 }
 function setQuestsList() {
 	ql = []

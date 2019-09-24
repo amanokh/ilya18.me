@@ -18,6 +18,7 @@ function onEnterCode(){
     
     if (code == "1337") {
         document.cookie = "userLogged=true; max-age=36000";
+        document.cookie = "score=0; max-age=36000";
         window.location.href="/quiz";
     }
     else {
