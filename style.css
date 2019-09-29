@@ -35,6 +35,7 @@ html{
     max-width: 700px;
     position: relative;
 }
+
 .block-wide{
     max-width: 900px !important;
     top:0 !important;
@@ -106,19 +107,40 @@ a.build-date{
   }
 }
 @media screen and (max-width: 480px){
-.block{
-    background: #FFF;
-    border-radius: 20px;
-    padding:20px;
-    z-index: 20;
-    margin:25px;
-    top:20vh;
-    max-width: 700px;
-    position: relative;
-}
+    .block{
+        background: #FFF;
+        border-radius: 20px;
+        padding:20px;
+        z-index: 20;
+        margin:25px;
+        top:20vh;
+        max-width: 700px;
+        position: relative;
+    }
+    .block-full{
+        padding:20px;
+        margin:15px;
+        top:0;
+        display: block;
+        position:absolute;
+        height:auto;
+        min-height: 400px;
+        bottom:0;
+    }
+    .inner{
+        margin: 0;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 }
 @media screen and (max-height: 480px){
-.block{
-    top:5vh;
-}
+    .inner{
+        transform:translate(0%, 0%);;
+        top:0;
+        margin:auto;
+        left:0;
+    }
 }
