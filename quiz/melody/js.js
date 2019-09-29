@@ -15,19 +15,20 @@ function startTest(){
 
 function nextQuestion(){
     question++;
+    var qLength = questions[question]["fake_ans"].length+1
     quizButton.css("display", "none");
     quizAlert.css('display','none');
     quizAlert.removeClass("alert-success");
     quizAlert.removeClass("alert-warning");
-    for (var i = 0; i < 4; i++){
+    for (var i = 0; i < qLength; i++){
         var ansId = "#ans" + i;
         $(ansId).removeClass("ans-right");               $(ansId).removeClass("ans-wrong");
     }
     if (question < questions.length){
-        ql = setQuestsList();
+        ql = setQuestsList(questions[question]["fake_ans"].length+1);
         $("#quiz-title").html(questions[question]["title"]);
-        $(".title-desc").css("display", "none");
-        for (var i = 0; i < 4; i++){
+        $("#song-lyrics").html(questions[question]["desc"]);
+        for (var i = 0; i < qLength; i++){
             var ansId = "#ans" + i;
             if (ql[i] == 0) {
                 $(ansId).html(questions[question]["true_ans"]);
@@ -39,24 +40,20 @@ function nextQuestion(){
 }
 
 function checkAnswer(i){
-    if (question == questions.length - 1) $("#end-button").css('display','block');
-    else quizButton.css('display','block');
-
     if (curQuestion == question){
-        quizAlert.css('display','inline-block');
         if (ql[i] == 0){
+            quizAlert.css('display','inline-block');
             $("#ans" + i).addClass("ans-right");
             quizAlert.addClass("alert-success");
             quizAlert.html(questions[question]["true_comment"]);
-            score++;
+            score = score + questions[question]["score"];
+            if (question == questions.length - 1) $("#end-button").css('display','block');
+            else quizButton.css('display','block');
+            curQuestion++;
         } else {
             $("#ans" + i).addClass("ans-wrong");
-            $("#ans" + ql.indexOf(0)).addClass("ans-right");
-            quizAlert.addClass("alert-warning");
-            quizAlert.html(questions[question]["fake_comments"][ql[i] - 1]);
-            
         }
-        curQuestion++;
+        
     }
 }
 function endTest(){
@@ -64,12 +61,12 @@ function endTest(){
     $(".block-end").css('display','block');
     $("#end-title").html("Поздравляем! Твой результат: +" + score * 25 + " баллов!");
     var currentScore = parseInt(getCookie("score"));
-    document.cookie="score=" + (currentScore + score * 25).toString() + "; max-age=36000; path=/";
+    document.cookie="score=" + (currentScore + score).toString() + "; max-age=36000; path=/";
 }
-function setQuestsList() {
+function setQuestsList(i) {
 	ql = []
-	while (ql.length != 4){
-		var a = Math.floor(Math.random() * 4);
+	while (ql.length != i){
+		var a = Math.floor(Math.random() * i);
 		if (ql.indexOf(a)==-1){
 			ql.push(a)
 		}
