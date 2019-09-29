@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+		<link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="style-local.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(55536064, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/55536064" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+		<title>18 мне уже</title>
+	</head>
+	<body>
+        <div id="grad-pink"></div>
+        <div class="inner">
+            <div class="block block-quiz">
+                <i class="em em-books"></i>
+                <h1 id="quiz-title" class="quest-title">
+                    1. Квиз с ответами на вопросы</h1>
+                <p class="title-desc">Необходимо будет ответить на несколько вопросов. Если ответил неправильно, оставим возможность выбрать ответ ещё раз.</p>
+                <div id="quiz-alert" class="alert alert-fade" role="alert">
+                    A simple primary alert—check it out!
+                </div>
+                <div id="answer-list" class="list-group">
+                    <a href="#" id="ans0" onclick="checkAnswer(0)" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                    <a href="#" id="ans1" onclick="checkAnswer(1)" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                    <a href="#" id="ans2" onclick="checkAnswer(2)" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                    <a href="#" id="ans3" onclick="checkAnswer(3)" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                </div>
+                <button id="start-button" type="button" class="btn btn-success" onclick="startTest()">Начать квиз</button>
+                <button id="quiz-button" type="button" class="btn btn-success" onclick="nextQuestion()">Следующий вопрос</button>
+                <button id="end-button" type="button" class="btn btn-success" onclick="endTest()">Закончить тест</button>
+            </div>
+            <div class="block block-end">
+                <h1 id="end-title" class="quest-title">
+                    Поздравляем! Твой результат: </h1>
+                <img class="emoji-end" src="man.png"/>
+            </div>
+        </div>
+            
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script src="js.js"></script>
+        <script src="/check_cookie.js"></script>
+        <script src="questions.js"></script>
+
+	</body>
+</html>

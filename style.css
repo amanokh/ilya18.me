@@ -44,6 +44,10 @@ html{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     }
+.inner-interact{
+    top:10vh;
+    transform: translate(-50%, 0);
+}
 .block-wide{
     max-width: 900px !important;
 }
@@ -116,7 +120,6 @@ a.build-date{
 @media screen and (max-width: 480px){
     .inner-interact{
         top:0;
-        transform: translate(-50%, 0);
     }
 }
 @media screen and (max-height: 480px){
