@@ -118,29 +118,21 @@ a.build-date{
         position: relative;
     }
     .block-full{
-        padding:20px;
-        margin:15px;
-        top:0;
-        display: block;
-        position:absolute;
-        height:auto;
-        min-height: 400px;
-        bottom:0;
-    }
-    .inner{
         margin: 0;
-        position: relative;
         top: 50%;
         left: 50%;
+        min-height: 400px;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
+    .inner{
+        height: inherit;
+        width:inherit;
+        padding:20px;
+        min-height: 470px;
+
+    }
 }
 @media screen and (max-height: 480px){
-    .inner{
-        transform:translate(0%, 0%);;
-        top:0;
-        margin:auto;
-        left:0;
-    }
+    
 }
