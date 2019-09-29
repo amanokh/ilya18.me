@@ -29,17 +29,23 @@ html{
     background: #FFF;
     border-radius: 20px;
     padding:20px;
-    z-index: 20;
     margin:0 auto;
-    top:25vh;
     max-width: 700px;
-    min-height: 460px;
     position: relative;
 }
-
+.inner{
+    margin:auto;
+    padding: 25px;
+    width:inherit;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    z-index:2;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    }
 .block-wide{
     max-width: 900px !important;
-    top:0 !important;
 }
 .block-end{
     display: none;
@@ -108,22 +114,10 @@ a.build-date{
   }
 }
 @media screen and (max-width: 480px){
-    .block{
+    .inner-interact{
         top:0;
-        width:inherit;
+        transform: translate(-50%, 0);
     }
-    .inner{
-        margin:auto;
-        padding: 25px;
-        width:inherit;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        min-height: 400px;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-    
 }
 @media screen and (max-height: 480px){
     
