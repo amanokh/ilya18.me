@@ -18,18 +18,31 @@
         <div id="grad"></div>
 
         <div class="inner">
-		
-                          
-                <!---<div class="text-center">
-                    <h1 id="title" class="quest-title1">18 есть?</h1>
-                    </div>
-                <div class="text-center">
-                    <h1 id="title" class="quest-title2">Покажи паспорт!</h1>
-                </div>--->
         <div class="block">
             <i class="em em-no_good"></i>
             <h1 class="quest-title">
-                ПодарокСПБ_1 - р</h1>
+                Ты правда думал, что это всё?</h1>
+            <p class="quest-desc">
+                Не спеши печалиться.<br>
+                Чтобы получить еще несколько заветных подарков, тебе предстоит выполнить несколько заданий, к которым ты наверняка готовился всё это лето!<br><br>
+                Наши задания строго <b>18+</b>, поэтому тебе нужно подтвердить свой возраст:
+            </p>
+            <div id="wrong-code" style="display:none" class="alert alert-warning" role="alert">
+                <a>Вы кто такой? Я вас не звал  </a> <a href="https://www.youtube.com/watch?v=7OBx-YwPl8g"><img style ="height:32px;" src="/whoareyou.png"/></a>
+            </div>
+            <form name="enter-check" class="form-inline" onsubmit="onEnterCode(); return false;">
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="date" name="code" class="form-control" placeholder="Дата рождения">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2" onclick="onEnterCode()">Войти</button>
+            </form>
+            <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+  </div>
+</div>
+            
             
                 
         </div>
@@ -38,6 +51,6 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-        <script src="/scripts/gifts_spb.js"></script>
+        <script src="js.js"></script>
 	</body>
 </html>
