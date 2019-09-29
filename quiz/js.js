@@ -4,3 +4,6 @@ function startQuiz1(){
 function startQuiz4(){
     window.location.href="/quiz/catch";
 }
+function startQuiz3(){
+    window.location.href="/quiz/melody";
+}
