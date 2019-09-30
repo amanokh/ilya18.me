@@ -9,43 +9,44 @@
 
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(55536064, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/55536064" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 		<title>18 мне уже</title>
 	</head>
-	<body>
-        <div id="grad"></div>
+	<body class="body-dark">
+        <div class="grad grad-dark"></div>
 
         <div class="inner">
-		
-                          
-                <!---<div class="text-center">
-                    <h1 id="title" class="quest-title1">18 есть?</h1>
-                    </div>
-                <div class="text-center">
-                    <h1 id="title" class="quest-title2">Покажи паспорт!</h1>
-                </div>--->
-        <div class="block">
-            <i class="em em-no_good"></i>
+        <div class="block block-full">
+            
+            <img style="width:64px" src="/emoji/monkey.gif"/>
             <h1 class="quest-title">
-                Test zone!</h1>
-            <p class="title-desc">Вход только по паспортам:</p>
+                Этот сайт содержит материалы для взрослых</h1>
+            <p class="quest-desc">
+                Все задания строго <b>18+.</b><br>Чтобы продолжить, подтверди возраст датой рождения:
+            </p>
             <div id="wrong-code" style="display:none" class="alert alert-warning" role="alert">
-  Введен неверный код, попробуй еще раз
-</div>
+                <a>Вы кто такой? Я вас не звал  </a> <a href="https://www.youtube.com/watch?v=7OBx-YwPl8g"><img style ="height:32px;" src="/whoareyou.png"/></a>
+            </div>
             <form name="enter-check" class="form-inline" onsubmit="onEnterCode(); return false;">
-                <input type="password" name="code" class="form-control" placeholder="Введи код">
+                <div class="form-group mb-2">
+                    <input type="date" name="code" style="min-width:200px" class="form-control" placeholder="Дата рождения">
+                </div>
+                <button type="submit" style="margin-left: 10px;" class="btn btn-primary mb-2" onclick="onEnterCode()">Войти</button>
             </form>
+            
+            </div>
                 
         </div>
-        </div>
-        <a class="build-date">Build 23:48 MSK 24/09/2019</a>
+        <a class="build-date">Build 23:48 MSK 30/09/2019</a>
+
             
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <script src="js.js"></script>
+        <script src="stages.js"></script>
 
 	</body>
 </html>

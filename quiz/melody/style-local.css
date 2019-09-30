@@ -24,3 +24,9 @@
     display: none;
     margin-bottom: 20px !important;
 }
+#song-lyrics{
+    font-size:1.2rem;
+}
+.list-group-item{
+    padding: .5rem 1rem !important;
+}

@@ -1,8 +1,9 @@
 $(document).ready(function() {
     var cookie = getCookie("userLogged");
     if (cookie == "true") {
-        window.location.href="/quiz";
-    }
+        var curStage = getCookie("curStage");
+        window.location.href=atob(stages[curStage]);  
+    } 
     var body = $('html');
     setTimeout(function() {body.css({'display':'unset','animation':'fadeInDown 0.5s cubic-bezier(.36,.07,.19,.97) both'});}, 500);
 });
@@ -16,10 +17,11 @@ var isAlertShown = false;
 function onEnterCode(){
     var code = document.forms["enter-check"]["code"].value;
     
-    if (code == "1337") {
-        document.cookie = "userLogged=true; max-age=36000";
-        document.cookie = "score=0; max-age=36000";
-        window.location.href="/quiz";
+    if (code == "1992-10-04") {
+        document.cookie = "userLogged=true; max-age=36000; path=/";
+        document.cookie = "score=0; max-age=36000; path=/";
+        document.cookie = "curStage=0; max-age=36000; path=/";
+        window.location.href="/welcome";
     }
     else {
         var a=$('#wrong-code');

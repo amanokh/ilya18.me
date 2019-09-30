@@ -10,6 +10,8 @@ function startTest(){
     $(".inner").addClass('inner-interact');
     $("#answer-list").css("display", "block");
     $("#start-button").css('display','none');
+    $("#quiz-desc").css('display','none');
+
     nextQuestion();
 }
 
@@ -59,7 +61,7 @@ function checkAnswer(i){
 function endTest(){
     $(".block-quiz").css('display','none');
     $(".block-end").css('display','block');
-    $("#end-title").html("Поздравляем! Твой результат: +" + score * 25 + " баллов!");
+    $("#end-title").html("Поздравляем! Твой результат: +" + score + " баллов!");
     var currentScore = parseInt(getCookie("score"));
     document.cookie="score=" + (currentScore + score).toString() + "; max-age=36000; path=/";
 }
