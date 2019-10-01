@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="display:none">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,52 +10,30 @@
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 		<link rel="stylesheet" href="/style.css">
-		<link rel="stylesheet" href="style-local.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(55536064, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/55536064" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
-		<title>18 - структура</title>
+		<title>18 мне уже</title>
 	</head>
 	<body>
-        <div class="grad grad-pink"></div>
+        <div class="grad"></div>
+
         <div class="inner">
-            <div class="block block-old">
-                <ul class="list-unstyled">
-                    <li>Игры
-                        <ul>
-                            <li><a href="/quiz/melody">Угадай мелодию</a></li>
-                            <li><a href="/quiz/hiking">Соберись в поход</a></li>
-                            <li><a href="/quiz/catch">Убей мышь</a></li>
-                        </ul>
-                    
-                    </li>
-                    
-                    <li>Подарки
-                        <ul>
-                            <li>СПб</li>
-                            <ul>
-                                <li><a href="/1f46">Антон - рм</a></li>
-                                <li><a href="/a736">Антон - сум</a></li>
-                                <li><a href="/0414">Антон - кн</a></li>
-                            </ul>
-                            <li>МСК</li>
-                            <ul>
-                                <li><a href="/18ff">Игорь - мрч</a></li>
-                                <li><a href="/e45e">Игорь - кол</a></li>
-                                <li><a href="/8c95">Игорь - обл</a></li>
-                            </ul>
-                            <li>Ирк</li>
-                            <ul>
-                                <li><a href="/fdd4">Ирк - чй</a></li>
-                                <li><a href="/e947">Ирк - гл</a></li>
-                                <li><a href="/91c9">Ирк - тл    с</a></li>
-                            </ul>
-                        </ul>
-                    </li>
-                    <li>Faucibus porta lacus fringilla vel</li>
-                    <li>Aenean sit amet erat nunc</li>
-                    <li>Eget porttitor lorem</li>
-                </ul>
-            </div>
+        <div class="block block-full">
+            <div class="content">
+            <img id="em1" class="emoji-gif" src="/emoji/thumbsup.gif"/>
+            <img id="em2" style="display: none" class="emoji-gif" src="/emoji/oops.gif"/>
+
+            <h3 id="title" class="quest-title">
+                Супер!</h3>
+            <p id="desc" style="margin-top:-10px" class="quest-desc">
+                Теперь ты стал на шаг ближе к главному подарку!<br><br>
+                Но чтобы получить его, тебе будет необходим специальный код. Ты его сможешь найти в своей новой <b>толстовке</b>, прямо в кармане.<br>Сохрани его до конца игры!
+            </p>
+            <a id="phone" style="display: none" href="tel:+79500995968">📞Позвонить Марии П.</a>
+            <iframe id="yaframe" style="display:none; margin-top:15px" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae55fd9f4d7ace58407ade0388c7dc3bdc97330e33ca0e34b6a1f58d9ae1c7bce&amp;source=constructor" width="100%" height="250" frameborder="0"></iframe>
+            <button type="button" class="btn btn-success" onclick="startGame()">Нашёл код</button>
+            </div>  
+            </div>    
         </div>
             
 
@@ -63,7 +41,6 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <script src="js.js"></script>
         <script src="/check_cookie.js"></script>
-        <script src="questions.js"></script>
 
 	</body>
 </html>

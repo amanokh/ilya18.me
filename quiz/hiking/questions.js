@@ -1,6 +1,6 @@
 let questions=[
     {
-        "title":"Начнём с легкого. <br>Из какой песни Маркула эта строчка?",
+        "title":"Берём с собой?",
         "desc":"<i>I’m totally worn out, the night is running out, so I can see the sunrise</i>",
         "fake_ans":["На виду","Худший друг","Серпантин"],
         "true_ans":"Последний билет",

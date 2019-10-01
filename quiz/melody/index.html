@@ -19,30 +19,33 @@
         <div class="grad grad-pink"></div>
         <div class="inner">
             <div class="block block-quiz">
+                <div class="content">
                 <i class="em em-musical_note"></i>
-                <h1 id="quiz-title" class="quest-title">
-                    "Угадай мелодию"</h1>
+                <h4 id="quiz-title" class="quest-title">
+                    Квест 1. "Угадай мелодию"</h4>
                 <p id="song-lyrics" class="title-desc">
                 <i>Листен ту ё харт... Энемиз, эвривер энемиз</i></p>
                 <p id="quiz-desc" class="title-desc">
                     Знакомо? А узнаешь ли ты свои любимые песни, если их перевести на английский? <br>Будь аккуратнее с выбором ответа, за ошибку начисляется меньше баллов!</p>
+                </div>
                 <div id="quiz-alert" class="alert alert-fade" role="alert">
-                    A simple primary alert—check it out!
                 </div>
-                <div id="answer-list" class="list-group">
-                    <a href="#" id="ans0" onclick="checkAnswer(0)" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                    <a href="#" id="ans1" onclick="checkAnswer(1)" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                    <a href="#" id="ans2" onclick="checkAnswer(2)" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                    <a href="#" id="ans3" onclick="checkAnswer(3)" class="list-group-item list-group-item-action">Vestibulum at eros</a>
-                </div>
-                <button id="start-button" type="button" class="btn btn-success" onclick="startTest()">Начать квиз</button>
+                <ul id="answer-list" class="list-group list-group-flush">
+                    <li id="ans0" onclick="checkAnswer(0)" class="list-group-item list-group-item-action"></li>
+                    <li id="ans1" onclick="checkAnswer(1)" class="list-group-item list-group-item-action"></li>
+                    <li id="ans2" onclick="checkAnswer(2)" class="list-group-item list-group-item-action"></li>
+                    <li id="ans3" onclick="checkAnswer(3)" class="list-group-item list-group-item-action"></li>
+                </ul>
+                <button id="start-button" type="button" class="btn btn-success" onclick="startTest()">Начать игру</button>
                 <button id="quiz-button" type="button" class="btn btn-success" onclick="nextQuestion()">Следующий вопрос</button>
                 <button id="end-button" type="button" class="btn btn-success" onclick="endTest()">Закончить тест</button>
             </div>
             <div class="block block-end">
-                <h1 id="end-title" class="quest-title">
-                    Поздравляем! Твой результат: </h1>
+                <h3 id="end-title" class="quest-title">
+                    Поздравляем! Твой результат: </h3>
+
                 <img class="emoji-end" src="man.png"/>
+                <button id="button" type="button" class="btn btn-success" onclick="nextLevel()">Следующий уровень</button>
             </div>
         </div>
             
