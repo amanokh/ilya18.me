@@ -25,15 +25,18 @@
                     Квест 2. "Соберись в поход"</h1>
                 <p id="quiz-desc" class="title-desc">
                     Вот это скорость! <br>А теперь проверим, сможешь ли ты так же быстро собраться в поход?</p>
+                    <div class="card">
+                    <div class="card-body">
+                        <i id="card-emoji" class="em em-reminder_ribbon"></i>
+                        <p class="card-title">Скотч</p>
+                    </div>
+                    <button type="button" class="btn btn-success" onclick="nextQuestion()">Берём</button>
+                    <button type="button" class="btn btn-success" onclick="nextQuestion()">Не берём</button>
+                </div>
                 </div>
                 <div id="quiz-alert" class="alert alert-fade" role="alert">
                 </div>
-                <ul id="answer-list" class="list-group list-group-flush">
-                    <li id="ans0" onclick="checkAnswer(0)" class="list-group-item list-group-item-action"></li>
-                    <li id="ans1" onclick="checkAnswer(1)" class="list-group-item list-group-item-action"></li>
-                    <li id="ans2" onclick="checkAnswer(2)" class="list-group-item list-group-item-action"></li>
-                    <li id="ans3" onclick="checkAnswer(3)" class="list-group-item list-group-item-action"></li>
-                </ul>
+                
                 <button id="start-button" type="button" class="btn btn-success" onclick="startTest()">Начать игру</button>
                 <button id="quiz-button" type="button" class="btn btn-success" onclick="nextQuestion()">Следующий вопрос</button>
                 <button id="end-button" type="button" class="btn btn-success" onclick="endTest()">Закончить тест</button>
