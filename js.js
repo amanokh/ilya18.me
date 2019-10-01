@@ -2,7 +2,9 @@ $(document).ready(function() {
     var cookie = getCookie("userLogged");
     if (cookie == "true") {
         var curStage = getCookie("curStage");
-        window.location.href=atob(stages[curStage]);  
+        try {
+            window.location.href=atob(stages[curStage]);  
+        } catch (e) {}
     } 
     var body = $('html');
     setTimeout(function() {body.css({'display':'unset','animation':'fadeInDown 0.5s cubic-bezier(.36,.07,.19,.97) both'});}, 500);
