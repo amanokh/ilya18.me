@@ -4,6 +4,7 @@
 #quiz-button, #end-button{
     display: none;
 }
+
 .alert{
     border-radius: 0rem!important;
     width: 100%;
@@ -43,14 +44,21 @@
 
 .card{
     margin: 20px auto;
-    height:350px;
+    height:400px;
     max-width:400px;
 }
-.img-fluid{
-    height:200px;
+.card-img-top{
+    height:270px;
+    object-fit: cover;
 }
 .card-start{
     z-index:3;
+}
+.card-anim-left{
+    animation: flyLeft 0.5s cubic-bezier(0.13, 0.7, 0.24, 1.06) both;
+}
+.card-anim-right{
+    animation: flyRight 0.5s cubic-bezier(0.13, 0.7, 0.24, 1.06) both;
 }
 .ans-body{
     display: flex;
@@ -58,7 +66,7 @@
     justify-content: center;
 }
 .card-ans{
-    margin-top:-370px;
+    margin-top:-420px;
     z-index: 2;
 }
 .card-title, .card-emoji-title{
@@ -77,17 +85,23 @@
     background-color: #ffeded !important;
 }
 #card-emoji{
-    margin: 72px auto;
+    margin: 96px auto;
     display: flex;
-    width:72px;
-    height:72px;
+    width:96px;
+    height:96px;
 }
 .btn-sm{
     width:100px;
 }
-.btn-yes,.btn-no{
+.btn-yes,.btn-no, .btn-next{
+    width:120px;
     background-color: antiquewhite!important;
     border-color: antiquewhite!important;
+}
+#end-button,.btn-next{
+    width:200px;
+    margin: 0 auto;
+
 }
 .button-container{
     margin: 0 auto;
@@ -119,6 +133,6 @@
   to {
     opacity: 0;
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(-225px, 50px, -10px) rotate(-20deg);
+    transform: translate3d(225px, 50px, -10px) rotate(20deg);
   }
 }

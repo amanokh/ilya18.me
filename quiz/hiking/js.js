@@ -2,70 +2,76 @@ var question = -1;
 var curQuestion = 0;
 var score = 0;
 var ql = [];
-var quizAlert = $("#quiz-alert");
-var quizButton = $("#quiz-button");
+var nextButton = $("#quiz-button");
+var endButton = $("#end-button");
+var quizButtons = $(".button-container");
+var quizTitle = $(".card-emoji-title");
+var quizEmoji = $("#card-emoji");
+var quizPhoto = $("#photo");
+var quizDesc = $("#desc");
+var cardStart = $(".card-start");
+var cards = $(".card");
 
 function startTest(){
     $(".block").addClass('block-wide');
     $(".inner").addClass('inner-interact');
-    $("#answer-list").css("display", "block");
     $("#start-button").css('display','none');
     $("#quiz-desc").css('display','none');
-    $(".card-start").css('animation', 'flyLeft 0.5s cubic-bezier(0.13, 0.7, 0.24, 1.06) both');
+    $("#quiz-title").html("Соберись в поход");
+    ql = setQuestsList(questions.length);
     nextQuestion();
 }
 
 function nextQuestion(){
     question++;
-    var qLength = questions[question]["fake_ans"].length+1
-    quizButton.css("display", "none");
-    quizAlert.css('display','none');
-    quizAlert.removeClass("alert-success");
-    quizAlert.removeClass("alert-warning");
-    for (var i = 0; i < qLength; i++){
-        var ansId = "#ans" + i;
-        $(ansId).removeClass("ans-right");               $(ansId).removeClass("ans-wrong");
-    }
+    quizButtons.css("display", "inline");
+    cards.css("display", "flex");
+    cardStart.removeClass("card-anim-left");
+    cardStart.removeClass("card-anim-right");
+    $(".card-ans").removeClass("card-false");
+    $(".card-ans").removeClass("card-true");
+    quizPhoto.attr("src", "photos/"+ql[question]+".jpg")
+    nextButton.css("display", "none");
+
     if (question < questions.length){
-        ql = setQuestsList(questions[question]["fake_ans"].length+1);
-        $("#quiz-title").html(questions[question]["title"]);
-        $("#song-lyrics").html(questions[question]["desc"]);
-        for (var i = 0; i < qLength; i++){
-            var ansId = "#ans" + i;
-            if (ql[i] == 0) {
-                $(ansId).html(questions[question]["true_ans"]);
-            } else {
-                $(ansId).html(questions[question]["fake_ans"][ql[i] - 1]);
-            }
-        }
+        var q = questions[ql[question]];
+        
+        quizEmoji.removeClass();
+        quizEmoji.addClass(q["emoji_src"]);
+        quizTitle.html(q["title"]);
+        quizDesc.html(q["yes_ans"]);
     }
 }
 
 function checkAnswer(i){
-    if (curQuestion == question){
-        if (ql[i] == 0){
-            quizAlert.css('display','inline-block');
-            $("#ans" + i).addClass("ans-right");
-            quizAlert.addClass("alert-success");
-            quizAlert.html(questions[question]["true_comment"]);
-            score = score + questions[question]["score"];
-            if (question == questions.length - 1) $("#end-button").css('display','block');
-            else quizButton.css('display','block');
-            curQuestion++;
-        } else {
-            $("#ans" + i).addClass("ans-wrong");
-        }
-        
+    var q = questions[ql[question]];
+    
+    if (i) cardStart.addClass("card-anim-left");
+    else cardStart.addClass("card-anim-right");
+    
+    quizButtons.css("display", "none");
+    if (question == questions.length - 1) endButton.css("display", "block");
+    else nextButton.css("display", "block");
+    
+    if (i == q["ans"]){
+        $(".card-ans").addClass("card-true");
+        if (i) quizDesc.html(q["yes_ans"]);
+        else quizDesc.html(q["no_ans"]);
+        score+=15;
+    } else {
+        $(".card-ans").addClass("card-false");
+        if (i) quizDesc.html(q["yes_ans"]);
+        else quizDesc.html(q["no_ans"]);
     }
+    
 }
 function endTest(){
     /*$(".block-quiz").css('display','none');
     $(".block-end").css('display','block');
     $("#end-title").html("Поздравляем! Твой результат: +" + score + " баллов!");*/
-    var currentScore = parseInt(getCookie("score"));
-    document.cookie="score=" + (currentScore + score).toString() + "; max-age=36000; path=/";
-    document.cookie = "curStage=2; path=/";
-    window.location.href="/codes/irk/";
+    document.cookie="scoreHiking=" + score .toString() + "; max-age=36000; path=/";
+    document.cookie = "curStage=5; path=/";
+    window.location.href="/codes/msk/";
 
 }
 
