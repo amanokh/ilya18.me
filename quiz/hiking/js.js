@@ -11,7 +11,7 @@ function startTest(){
     $("#answer-list").css("display", "block");
     $("#start-button").css('display','none');
     $("#quiz-desc").css('display','none');
-
+    $(".card-start").css('animation', 'flyLeft 0.5s cubic-bezier(0.13, 0.7, 0.24, 1.06) both');
     nextQuestion();
 }
 
@@ -68,6 +68,7 @@ function endTest(){
     window.location.href="/codes/irk/";
 
 }
+
 function setQuestsList(i) {
 	ql = []
 	while (ql.length != i){

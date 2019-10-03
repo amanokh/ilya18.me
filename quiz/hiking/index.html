@@ -25,14 +25,27 @@
                     Квест 2. "Соберись в поход"</h1>
                 <p id="quiz-desc" class="title-desc">
                     Вот это скорость! <br>А теперь проверим, сможешь ли ты так же быстро собраться в поход?</p>
-                    <div class="card">
-                    <div class="card-body">
-                        <i id="card-emoji" class="em em-reminder_ribbon"></i>
-                        <p class="card-title">Скотч</p>
+                    <div class="card card-start">
+                        <div class="card-container">
+                            <div class="card-body">
+                                <i id="card-emoji" class="em em-reminder_ribbon"></i>
+                                <p class="card-emoji-title">Скотч</p>
+                            </div>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-success" onclick="nextQuestion()">Берём</button>
-                    <button type="button" class="btn btn-success" onclick="nextQuestion()">Не берём</button>
-                </div>
+                    <div class="card card-ans card-false">
+                        <div class="card-container">
+                            <div class="card-img-top"><img class="img-fluid" src="photos/1.jpg"/></div>
+                            
+                            <div class="card-body ans-body">
+                                <p class="card-title">Это бесспорно будет ошибкой, ведь в пути можно встретить так много милых детей, за которых не нужно нести ответственность.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="btn btn-warning btn-yes btn-sm" onclick="nextQuestion()">Берём</button>
+                        <button type="button" class="btn btn-warning btn-no btn-sm" onclick="nextQuestion()">Не берём</button>
+                    </div>
                 </div>
                 <div id="quiz-alert" class="alert alert-fade" role="alert">
                 </div>
