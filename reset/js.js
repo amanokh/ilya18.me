@@ -12,5 +12,8 @@ function getCookie(name) {
 }
 
 function startGame(){
+    document.cookie = "curStage=0; path=/";
+    document.cookie = "userLogged=false; path=/";
+    window.location.href="/";
     
 }
