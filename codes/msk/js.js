@@ -10,14 +10,7 @@ function getCookie(name) {
 }
 
 function startGame(){
-    document.cookie = "curStage=2; path=/";
-    $("#em1").css('display','none');
-    $("#em2").css('display','unset');
-    $("#phone").css('display','unset');
-    $("#yaframe").css('display','unset');
-    $(".btn").css('display','none');
-    $("#title").toggleClass('alert-shake');
-    $("#title").html("Упс! Кажется, чего-то не хватает");
-    $("#desc").toggleClass('alert-shake');
-    $("#desc").html("Не бойся, наша техподдержка уже решила проблему!<br>Тебе необходимо срочно обратиться по указанному адресу, чтобы продолжить игру");
+    $("#c1").css('display','none');
+    $("#c2").css('display','block');
+    
 }

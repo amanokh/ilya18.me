@@ -27,7 +27,7 @@ let questions=[
         "title":"Одна из свежих песен Miyagi",
         "desc":"<i>Forget each other, well<br>Although we sank our ships</i>",
         "fake_ans":["Мы не одни","Angel","Captain"],
-        "true_ans":"Корбали",
+        "true_ans":"Корабли",
         "true_comment":"Правильно!<br><i>\"Забудем друг за друга, ну и пусть<br>Мы потопили наши корабли\"</i>",
         "score":15
     },

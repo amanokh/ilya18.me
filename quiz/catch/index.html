@@ -15,33 +15,68 @@
         <!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(55536064, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/55536064" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 		<title>18 мне уже</title>
 	</head>
-	<body>
+	<body class="body-pink">
         <div class="grad grad-pink"></div>
         <div class="inner">
-            <div class="block block-start">
+            <div class="block block-quiz">
+                <div class="content">
                 <i class="em em-mouse"></i>
-                <h1 id="quiz-title" class="quest-title">Убей мышь!</h1>
-                <p class="title-desc">Но не убей случайно Элину или запас тушёнки!</p>
-                <button id="start-button" type="button" class="btn btn-success" onclick="startGame()">Начать игру</button>
-            </div>
-            <div class="block block-game">
-                    <div class="game-row">
-                        <div>
-                            <p class="game-info game-lives">Жизни:</p>
-                        </div>
-                        <div>
-                            One
-                        </div>
-                        <div >
-                            One
-                        </div>
+                <h4 id="quiz-title" class="quest-title">
+                    Квест 3. "Убей мышь"</h4>
+                <p id="quiz-desc" class="title-desc">
+                    А сейчас тебе нужно сразиться с главным боссом - страшной мышью, которая никому не даёт уснуть! <br>Только будь аккуратным - не убей случайно Элину или запас тушёнки:)<br><br><i>Чтобы играть, тыкай на появляющиеся мыши</i></p>
+                    <table style="display: none"  class="game-table">
+                        <tr>
+                            <td onclick="poul(1)" class="td-a"><i id="1" class=""></i></td>
+                            <td onclick="poul(2)" class="td-b"><i id="2" class=""></i></td>
+                            <td onclick="poul(3)" class="td-a"><i id="3" class=""></i></td>
+                            <td onclick="poul(4)" class="td-b"><i id="4" class=""></i></td>
+                            <td onclick="poul(5)" class="td-a"><i id="5" class=""></i></td>
+                        </tr>
+                        <tr>
+                            <td onclick="poul(6)" class="td-b"><i id="6" class=""></i></td>
+                            <td onclick="poul(7)" class="td-a"><i id="7" class=""></i></td>
+                            <td onclick="poul(8)" class="td-b"><i id="8" class=""></i></td>
+                            <td onclick="poul(9)" class="td-a"><i id="9" class=""></i></td>
+                            <td onclick="poul(10)" class="td-b"><i id="10" class=""></i></td>
+                        </tr>
+                        <tr>
+                            <td onclick="poul(11)" class="td-a"><i id="11" class=""></i></td>
+                            <td onclick="poul(12)" class="td-b"><i id="12" class=""></i></td>
+                            <td onclick="poul(13)" class="td-a"><i id="13" class=""></i></td>
+                            <td onclick="poul(14)" class="td-b"><i id="14" class=""></i></td>
+                            <td onclick="poul(15)" class="td-a"><i id="15" class=""></i></td>
+                        </tr>
+                        <tr>
+                            <td onclick="poul(16)" class="td-b"><i id="16" class=""></i></td>
+                            <td onclick="poul(17)" class="td-a"><i id="17" class=""></i></td>
+                            <td onclick="poul(18)" class="td-b"><i id="18" class=""></i></td>
+                            <td onclick="poul(19)" class="td-a"><i id="19" class=""></i></td>
+                            <td onclick="poul(20)" class="td-b"><i id="20" class=""></i></td>
+                        </tr>
+                        <tr>
+                            <td onclick="poul(21)" class="td-a"><i id="21" class=""></i></td>
+                            <td onclick="poul(22)" class="td-b"><i id="22" class=""></i></td>
+                            <td onclick="poul(23)" class="td-a"><i id="23" class=""></i></td>
+                            <td onclick="poul(24)" class="td-b"><i id="24" class=""></i></td>
+                            <td onclick="poul(25)" class="td-a"><i id="25" class=""></i></td>
+                        </tr>
+                    </table>
+                    <div class="button-container" style="display: none">
+                        <button type="button" id="btn-yes" class="btn btn-warning btn-yes btn-sm" onclick="checkAnswer(true)">Берём</button>
+                        <button type="button" id="btn-no" class="btn btn-warning btn-no btn-sm" onclick="checkAnswer(false)">Не берём</button>
                     </div>
+                </div>
+                <div id="quiz-alert" class="alert alert-fade" role="alert">
+                </div>
+                
+                <button id="start-button" type="button" class="btn btn-success" onclick="startTest()">Начать игру</button>
+                <button id="quiz-button" type="button" class="btn btn-next btn-sm" onclick="nextQuestion()">Дальше</button>
+                <button id="end-button" type="button" class="btn btn-success btn-sm" onclick="endTest()">Получить приз</button>
             </div>
-            
             <div class="block block-end">
-                <h1 id="end-title" class="quest-title">
-                    Поздравляем! Твой результат: </h1>
-                <img class="emoji-end" src="man.png"/>
+                <h4 id="end-title" class="quest-title">
+                    Поздравляем! Твой результат: </h4>
             </div>
         </div>
             
@@ -50,6 +85,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <script src="js.js"></script>
         <script src="/check_cookie.js"></script>
+        <script src="questions.js"></script>
 
 	</body>
 </html>

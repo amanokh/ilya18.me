@@ -17,19 +17,20 @@ function startTest(){
     $(".inner").addClass('inner-interact');
     $("#start-button").css('display','none');
     $("#quiz-desc").css('display','none');
-    $("#quiz-title").html("Соберись в поход");
+    $("#quiz-title").html("Берём или нет?");
     ql = setQuestsList(questions.length);
     nextQuestion();
 }
 
 function nextQuestion(){
     question++;
-    quizButtons.css("display", "inline");
+    quizButtons.css("display", "block");
     cards.css("display", "flex");
     cardStart.removeClass("card-anim-left");
     cardStart.removeClass("card-anim-right");
     $(".card-ans").removeClass("card-false");
     $(".card-ans").removeClass("card-true");
+    $(".prog").html((question+1) + "/" + questions.length);
     quizPhoto.attr("src", "photos/"+ql[question]+".jpg")
     nextButton.css("display", "none");
 

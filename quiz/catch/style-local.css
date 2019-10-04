@@ -1,6 +1,181 @@
-.game-lives{
-    text-align: left;
+#quiz-alert{
+    display: none;
 }
-.game-row{
+#quiz-button, #end-button{
+    display: none;
+}
+
+.alert{
+    border-radius: 0rem!important;
+    width: 100%;
+}
+.btn{
+    margin-left: 15px;
+}
+.ans-right{
+    background-color: #aceabb !important;
+}
+.ans-wrong{
+    background-color: #fce08a !important;
+}
+.emoji-end{
     display: inline-block;
+    padding: 20px;
+    position: relative;
+}
+#end-title{
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+}
+#answer-list{
+    display: none;
+    margin-bottom: 20px !important;
+}
+#song-lyrics{
+    margin-top: -10px;
+    font-size:1.2rem;
+}
+.list-group-item{
+    padding: .5rem 1rem !important;
+}
+
+
+
+.card{
+    margin: 20px auto;
+    height:400px;
+    max-width:400px;
+}
+.card-img-top{
+    height:270px;
+    object-fit: cover;
+}
+.card-start{
+    z-index:3;
+}
+.card-anim-left{
+    animation: flyLeft 0.5s cubic-bezier(0.13, 0.7, 0.24, 1.06) both;
+}
+.card-anim-right{
+    animation: flyRight 0.5s cubic-bezier(0.13, 0.7, 0.24, 1.06) both;
+}
+.ans-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fadeDown{
+    animation: fadeInDown 0.3s cubic-bezier(0.13, 0.7, 0.24, 1.06) both;
+}
+.fadeUp{
+    animation: fadeInUp 0.3s cubic-bezier(0.13, 0.7, 0.24, 1.06) both;
+}
+.card-ans{
+    margin-top:-420px;
+    z-index: 2;
+}
+.card-title, .card-emoji-title{
+    text-align: center;
+}
+.card-emoji-title{
+    font-size: 1.5rem;
+}
+.card-photo{
+    width:100%
+}
+.card-true{
+    background-color: #e8ffe8!important;
+}
+.card-false{
+    background-color: #ffeded !important;
+}
+#card-emoji{
+    margin: 96px auto;
+    display: flex;
+    width:96px;
+    height:96px;
+}
+.btn-sm{
+    width:100px;
+}
+.btn-yes,.btn-no, .btn-next{
+    width:120px;
+    background-color: antiquewhite!important;
+    border-color: antiquewhite!important;
+}
+#end-button,.btn-next{
+    width:200px;
+    margin: 0 auto;
+
+}
+.button-container{
+    margin: 0 auto;
+    width:290px;
+    padding-right: 15px;
+}
+
+@keyframes flyLeft {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(-225px, 50px, -10px) rotate(-20deg);
+  }
+}
+@keyframes flyRight {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(225px, 50px, -10px) rotate(20deg);
+  }
+}
+
+
+
+
+.prog{
+    position: absolute;
+    right: 20px;
+    font-size: 0.7rem;
+    font-style: italic;
+    color: #CCC;
+    top: 20px;
+}
+.game-table{
+    width: 300px;
+    margin: 20px auto;
+    height: 300px;
+}
+.em{
+    margin:4px;
+    width:42px;
+    height:42px;
+}
+td{
+    border: 2px solid #BBB;
+    width:20%;
+    text-align: center;
+}
+tr{
+    height:20%;
+}
+.td-a{
+    background-color: #fff2df
+}
+.td-b{
+    background-color: #fffbf5
 }

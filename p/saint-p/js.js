@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    if (parseInt(getCookie("curStage")) >= 2){
-        document.cookie = "curStage=4; path=/";
-        window.location.href="/quiz/hiking";
+    if (parseInt(getCookie("curStage")) >= 5){
+        document.cookie = "curStage=7; path=/";
+        window.location.href="/quiz/catch";
         var body = $('html');
         setTimeout(function() {body.css({'display':'unset','animation':'fadeInDown 0.5s cubic-bezier(.36,.07,.19,.97) both'});}, 500);
     }
@@ -14,8 +14,8 @@ function getCookie(name) {
 }
 
 function startGame(){
-    if (parseInt(getCookie("curStage")) >= 2){
-    document.cookie = "curStage=4; path=/";
-    window.location.href="/quiz/hiking";
+    if (parseInt(getCookie("curStage")) >= 5){
+    document.cookie = "curStage=7; path=/";
+    window.location.href="/quiz/catch";
     }
 }

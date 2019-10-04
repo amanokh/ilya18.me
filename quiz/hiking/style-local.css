@@ -5,19 +5,11 @@
     display: none;
 }
 
-.alert{
-    border-radius: 0rem!important;
-    width: 100%;
-}
+
 .btn{
     margin-left: 15px;
 }
-.ans-right{
-    background-color: #aceabb !important;
-}
-.ans-wrong{
-    background-color: #fce08a !important;
-}
+
 .emoji-end{
     display: inline-block;
     padding: 20px;
@@ -28,20 +20,17 @@
     position: relative;
     padding: 20px;
 }
-#answer-list{
-    display: none;
-    margin-bottom: 20px !important;
-}
-#song-lyrics{
-    margin-top: -10px;
-    font-size:1.2rem;
-}
-.list-group-item{
-    padding: .5rem 1rem !important;
-}
 
 
 
+.prog{
+    position: absolute;
+    right: 20px;
+    font-size: 0.7rem;
+    font-style: italic;
+    color: #CCC;
+    top: 20px;
+}
 .card{
     margin: 20px auto;
     height:400px;
@@ -105,7 +94,8 @@
 }
 .button-container{
     margin: 0 auto;
-    width:250px;
+    width:290px;
+    padding-right: 15px;
 }
 
 @keyframes flyLeft {

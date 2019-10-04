@@ -11,6 +11,14 @@
 .btn{
     margin-left: 15px;
 }
+.prog{
+    position: absolute;
+    right: 20px;
+    font-size: 0.7rem;
+    font-style: italic;
+    color: #CCC;
+    top: 20px;
+}
 .ans-right{
     background-color: #aceabb !important;
 }

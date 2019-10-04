@@ -10,7 +10,6 @@ function getCookie(name) {
 }
 
 function startGame(){
-    document.cookie = "curStage=2; path=/";
     $("#em1").css('display','none');
     $("#em2").css('display','unset');
     $("#phone").css('display','unset');

@@ -17,7 +17,8 @@ function startTest(){
 
 function nextQuestion(){
     question++;
-    var qLength = questions[question]["fake_ans"].length+1
+    var qLength = questions[question]["fake_ans"].length+1;
+    $(".prog").html((question+1) + "/" + questions.length);
     quizButton.css("display", "none");
     quizAlert.css('display','none');
     quizAlert.removeClass("alert-success");
