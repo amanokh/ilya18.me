@@ -30,7 +30,7 @@ var lastPlace;
 function play(){
     if (score < 15){
         randomize();
-        setTimeout(function(){play();}, (Math.random() * (1100 - Math.min(score,8)*135) +200));
+        setTimeout(function(){play();}, (Math.random() * (1100 - Math.min(score,8)*140) +200));
     } else {
         $(".game-table").css('display','none');
         $("#quiz-title").html("Миссия выполнена!").addClass("fadeDown");
@@ -51,10 +51,11 @@ function randomize(){
     $(pl).removeClass();
     orderPic[r]="";
     
-    var pl = order[(ai-3)%7];
+    //delete 3rd
+    var pl = order[Math.abs((ai-3)%7)];
     $(pl).addClass("fadeIn");
     $(pl).removeClass();
-    orderPic[(ai-3)%7]="";
+    orderPic[Math.abs((ai-3)%7)]="";
     
     order[ai%7]="#"+lastPlace;
     orderPic[ai%7]="#"+lastPic;
