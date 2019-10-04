@@ -1,4 +1,3 @@
-let stagesDec=["/welcome/","/quiz/melody/", "/codes/irk/", "/p/moscow/", "/quiz/hiking/", "/codes/msk/", "/p/saint-p/", "/quiz/catch/", "/codes/spb/", "/codes/together/","/happy-bday/"];
 let stages=["L3dlbGNvbWUv", 
             "L3F1aXovbWVsb2R5Lw==", 
             "L2NvZGVzL2lyay8=", 
