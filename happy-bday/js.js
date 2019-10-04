@@ -1,5 +1,5 @@
 $('#Ilya').typeIt({
-     speed: 50,
+     speed: 100,
      autoStart: true
 })
 .tiType("Дорогой Илья!")
