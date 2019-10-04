@@ -28,7 +28,7 @@ var ai = 0;
 var lastPic;
 var lastPlace;
 function play(){
-    if (score < 4){
+    if (score < 15){
         randomize();
         setTimeout(function(){play();}, (Math.random() * (1100 - Math.min(score,8)*140) +200));
     } else {

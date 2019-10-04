@@ -114,6 +114,13 @@ a.build-date{
 .alert-shake{
     animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
 }
+.dot{
+    margin:10px;
+}
+.btn-end{
+    width:200px;
+    margin: 0 auto;
+}
 @keyframes fadeInDown {
   from {
     opacity: 0;

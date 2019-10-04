@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="display: none">
+<html style="display:none">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,31 +14,28 @@
         <!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(55536064, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/55536064" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 		<title>18 мне уже</title>
 	</head>
-	<body class="body-pink">
-        <div class="grad grad-pink"></div>
+	<body>
+        <div class="grad"></div>
+
         <div class="inner">
-		
-                          
-                <!---<div class="text-center">
-                    <h1 id="title" class="quest-title1">18 есть?</h1>
-                    </div>
-                <div class="text-center">
-                    <h1 id="title" class="quest-title2">Покажи паспорт!</h1>
-                </div>--->
-        <div class="block">
-            <i class="em em-bear"></i>
-            <h1 class="quest-title">
-                Ты залогинен! <br>Здесь будет квест</h1>
-            <button type="button" class="btn btn-success" onclick="startQuiz1()">Начать тест</button>
-            <button type="button" class="btn btn-success" onclick="startQuiz2()">Распределение фотографий</button>
-            <button type="button" class="btn btn-success" onclick="startQuiz3()">Угадай мелодию</button>
-            <button type="button" class="btn btn-success" onclick="startQuiz4()">"Убей мышь"</button>
+        <div class="block block-full">
+            <div id="c1" class="content">
+            <img id="em1" class="emoji-gif" src="/emoji/partyface.gif"/>
+            <img id="em2" style="display: none" class="emoji-gif" src="/emoji/oops.gif"/>
 
-
-
-            
-                
-        </div>
+            <h3 id="title" class="quest-title">
+                Ю-ху-ху!</h3>
+            <p id="desc" style="margin-top:-10px" class="quest-desc">
+                Поздравляем, ты прошел курс молодого бойца и справился со всеми нашими заданиями!<br>Теперь тебе осталось найти последний 4-значный код в последней коробке. Он написан за <b>QR-кодом</b>, который ты сканировал до игры.
+            </p>
+            <button type="button" class="btn btn-success" onclick="startGame()">Нашёл код</button>
+            </div> 
+            <div id="c2" style="display:none" class="content">
+                <img id="em2" style="margin-left: -10px;" class="emoji-gif" src="/emoji/rocket.gif"/>
+                <h4 id="title" class="quest-title">
+                А теперь ты можешь открыть посылку №3 из Санкт-Петербурга:)</h4>
+            </div>
+            </div>    
         </div>
             
 
@@ -46,5 +43,6 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <script src="js.js"></script>
         <script src="/check_cookie.js"></script>
+
 	</body>
 </html>
