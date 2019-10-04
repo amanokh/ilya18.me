@@ -5,7 +5,7 @@ $(document).ready(function() {
     } else {
         var pathName = window.location.pathname;
         var curStage = getCookie("curStage");
-        if (curStage < 10) {
+        if (curStage < 10)) {
             window.location.href=(atob(stages[curStage]));
         }
     }
