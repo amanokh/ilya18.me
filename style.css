@@ -121,6 +121,17 @@ a.build-date{
     width:200px;
     margin: 0 auto;
 }
+.info{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color:#ddffff;
+    opacity:.7;
+}
+.info:hover{
+    color:#9ee0e0;
+
+}
 @keyframes fadeInDown {
   from {
     opacity: 0;
