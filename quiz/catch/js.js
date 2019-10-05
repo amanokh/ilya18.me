@@ -30,7 +30,7 @@ var lastPlace;
 function play(){
     if (score < 15){
         randomize();
-        setTimeout(function(){play();}, (Math.random() * (1100 - Math.min(score,8)*140) +260));
+        setTimeout(function(){play();}, (Math.random() * (1100 - Math.min(score,8)*140) +230));
     } else {
         $(".game-table").css('display','none');
         $("#quiz-title").html("Миссия выполнена!").addClass("fadeDown");
