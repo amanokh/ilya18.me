@@ -20,10 +20,7 @@ function onEnterCode(){
     var code = document.forms["enter-check"]["code"].value;
     
     if (code == "2001-10-04") {
-        document.cookie = "userLogged=true; max-age=36000; path=/";
-        document.cookie = "score=0; max-age=36000; path=/";
-        document.cookie = "curStage=0; max-age=36000; path=/";
-        window.location.href="/welcome";
+        login();
     }
     else {
         var a=$('#wrong-code');
@@ -39,4 +36,10 @@ function onEnterCode(){
         }, 500);
     }
     
+}
+function login() {
+    document.cookie = "userLogged=true; max-age=36000; path=/";
+    document.cookie = "score=0; max-age=36000; path=/";
+    document.cookie = "curStage=0; max-age=36000; path=/";
+    window.location.href="/welcome";
 }

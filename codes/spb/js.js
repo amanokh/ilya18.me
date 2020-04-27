@@ -12,5 +12,4 @@ function getCookie(name) {
 function startGame(){
     document.cookie = "curStage=9; path=/";
     window.location.href="/codes/together/";
-    
 }

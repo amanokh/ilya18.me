@@ -14,3 +14,10 @@ function startGame(){
     $("#c2").css('display','block');
     
 }
+
+function continueGame(){
+    if (parseInt(getCookie("curStage")) >= 5){
+        document.cookie = "curStage=7; path=/";
+        window.location.href="/quiz/catch";
+    }
+}

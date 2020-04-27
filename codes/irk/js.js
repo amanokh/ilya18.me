@@ -20,3 +20,9 @@ function startGame(){
     $("#desc").toggleClass('alert-shake');
     $("#desc").html("Не бойся, наша техподдержка уже решила проблему!<br>Тебе необходимо срочно обратиться по указанному адресу, чтобы продолжить игру");
 }
+function continueGame() {
+    if (parseInt(getCookie("curStage")) >= 2){
+        document.cookie = "curStage=4; path=/";
+        window.location.href="/quiz/hiking";
+    }
+}
