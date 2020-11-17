@@ -37,26 +37,26 @@ function play(){
         $("#quiz-desc").css('display','block').addClass("fadeDown");
         $("#quiz-desc").html("Палатка может спать спокойно! ").addClass("fadeDown");
         $("#end-button").css('display','block').addClass("fadeDown");
-        
-        
+
+
     }
 }
 function randomize(){
     lastPlace = choosePlace();
     lastPic = choose();
-    
+
     var r = rand(4);
     var pl = order[r];
     $(pl).addClass("fadeIn");
     $(pl).removeClass();
     orderPic[r]="";
-    
+
     //delete 3rd
     var pl = order[Math.abs((ai-3)%7)];
     $(pl).addClass("fadeIn");
     $(pl).removeClass();
     orderPic[Math.abs((ai-3)%7)]="";
-    
+
     order[ai%7]="#"+lastPlace;
     orderPic[ai%7]="#"+lastPic;
     $("#"+lastPlace).addClass(lastPic);
@@ -74,6 +74,7 @@ function poul(i){
         $("#"+i).removeClass();
         score++;
         $("#quiz-title").html("Осталось убить " + (15 - score)+ mouser(15-score));
+        window.navigator.vibrate(100);
     }
 }
 function choosePlace(){
