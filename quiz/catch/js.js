@@ -74,7 +74,7 @@ function poul(i){
         $("#"+i).removeClass();
         score++;
         $("#quiz-title").html("Осталось убить " + (15 - score)+ mouser(15-score));
-        window.navigator.vibrate(100);
+        window.navigator.vibrate(80);
     }
 }
 function choosePlace(){
