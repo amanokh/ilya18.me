@@ -8,7 +8,7 @@ $(document).ready(function() {
     } 
     var body = $('html');
     login();
-    setTimeout(function() {body.css({'display':'unset','animation':'fadeInDown 0.5s cubic-bezier(.36,.07,.19,.97) both'});}, 500);
+    # setTimeout(function() {body.css({'display':'unset','animation':'fadeInDown 0.5s cubic-bezier(.36,.07,.19,.97) both'});}, 500);
 });
 function getCookie(name) {
   let matches = document.cookie.match(new RegExp(
