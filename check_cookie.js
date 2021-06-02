@@ -10,6 +10,7 @@ let stages=["L3dlbGNvbWUv",
             "L2NvZGVzL3RvZ2V0aGVyLw==",
             "L2hhcHB5LWJkYXkv"];
 $(document).ready(function() {
+    /* TODO: enable cookie check back
     var cookie = getCookie("userLogged");
     if (cookie != "true") {
         window.location.href="/";
@@ -19,7 +20,8 @@ $(document).ready(function() {
         if (curStage < stages.indexOf(btoa(pathName))) {
             window.location.href=(atob(stages[curStage]));
         }
-    }
+    }*/
+
     var body = $('html');
     setTimeout(function() {body.css({'display':'unset','animation':'fadeInDown 0.4s cubic-bezier(.36,.07,.19,.97) both'});}, 200);
 });
